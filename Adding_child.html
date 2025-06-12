@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: black;color: wheat;">
+    <ul class="language">
+        <li>javascript</li>
+        <li>typescript</li>
+    </ul>
+</body>
+<script>
+function AddLanguage(langname){
+const li= document.createElement('li');
+li.innerHTML=`${langname}`
+document.querySelector('.language').appendChild(li)
+}
+AddLanguage("python")
+function addOptimisedLang(langname){
+    const li = document.createElement('li');
+    li.appendChild(document.createTextNode(langname))
+    document.querySelector(".language").appendChild(li)
+}
+addOptimisedLang("java")
+//Editing of an element
+const secondLang = document.querySelector("li:nth-child(2)")
+//secondlang.innerHtml="GO"
+const newli = document.createElement('li')
+newli.textContent='GO'
+</script>
+</html>
