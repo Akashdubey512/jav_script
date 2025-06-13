@@ -1,0 +1,25 @@
+body{
+    background: gray;
+}
+.box{
+    height: 100px;
+    width: 100px;
+    margin: 5%;   
+}
+#container{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+#orange{
+background-color: orange;
+}
+#blue{
+background-color: blue;
+}
+#green{
+background-color: green;
+}
+#white{
+background-color: white;
+}
