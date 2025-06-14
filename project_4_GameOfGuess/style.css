@@ -1,0 +1,27 @@
+        body{
+            background-color: rgb(99, 97, 97);
+            width: 100vh;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        h1{
+            margin-top: 130px;
+            margin-left: 525px;
+            margin-bottom: 30px;
+        
+        }
+        .container{
+            width: 300px;
+            background-color: #000;
+            color: white;
+            padding: 20px;
+            margin-left: 475px;
+            text-align: center;
+            border-radius: 10px;
+           font-size: large;
+        }
+        input{
+            background-color: rgb(102, 102, 105);
+            margin: 10px;
+        }

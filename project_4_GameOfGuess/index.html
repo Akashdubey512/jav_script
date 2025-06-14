@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game of guess</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+       <h1>Game of guess</h1>
+     <div class="container">
+        <form >
+            <tr><label for="guess">Enter your guess</label><br></tr>
+            <tr><input type="text" id="guess"><br></tr>
+            <tr><input type="submit" id="sub"><br></tr>
+            <div class="resultPara">
+            <tr>Remaining guesses:<p style="display: inline;" id="n_guess">10</p></tr>
+            <tr ><p>Previous guesses are:</p><p id="prev"></p></tr>
+            <p id="message"></p>
+            <p>Pick a number  between 1 to 100 <br> 10 chances are given to you</p>
+            </div>
+        </form>
+     </div>
+</body>
+<script src="index.js"></script>
+</html>
