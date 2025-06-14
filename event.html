@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="owl" style="width: 100px; height: 100px;background-color: brown;"></div>
+    <!-- adding events in element is not a good practice creates problem in bigger code  -->
+      <!-- <div class="owl" onclick="alert('not a good practice ')""></div> -->
+</body>
+<script>
+    // document.getElementsByClassName('owl').onclick = function(){
+    //     alert("owl clicked")
+    // }
+    // this approch didnot give access to all functionalities
+
+    document.getElementsByClassName('owl').addEventListener('click',function(e){},false)
+    // here false is a default value  
+    //  event propagation is done by giving true or false 
+    // if false it shows event bubling
+    //if true it shows event capturing
+    // it gives an object
+    // type timestamp defaultPrevented target toElement srcElement 
+    // currentTarget ClientX ClientY screenY screenX
+
+</script>
+</html>
