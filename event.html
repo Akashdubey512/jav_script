@@ -4,9 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        li{
+            padding: 20px;
+        }
+    </style>
 </head>
 <body>
-    <div class="owl" style="width: 100px; height: 100px;background-color: brown;"></div>
+    <ul class="images" style="width: 100px; height: 100px;">
+        <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae tempore molestias a aut dicta hic ab ullam voluptate maiores ut?</li>
+        <li id="owl">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus, eveniet vel? Nesciunt deserunt facere aperiam nisi quibusdam quidem. Obcaecati, dolores?</li>
+        <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque ducimus et quod maiores itaque quia in perspiciatis, illum inventore aspernatur?</li>
+        <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit alias placeat, maiores reprehenderit ipsum architecto repellendus saepe necessitatibus consectetur, eos odio fugiat magni. Explicabo aspernatur error voluptas aperiam architecto similique!</li>
+        <li><a  id="link" href="https://www.youtube.com/watch?v=_TjtAyMkiTI&t=67s">google.com</a></li>
+    </ul>
     <!-- adding events in element is not a good practice creates problem in bigger code  -->
       <!-- <div class="owl" onclick="alert('not a good practice ')""></div> -->
 </body>
@@ -16,14 +27,48 @@
     // }
     // this approch didnot give access to all functionalities
 
-    document.getElementsByClassName('owl').addEventListener('click',function(e){},false)
+    // document.getElementsByClassName('owl').addEventListener('click',function(e){},false)
     // here false is a default value  
     //  event propagation is done by giving true or false 
     // if false it shows event bubling
     //if true it shows event capturing
     // it gives an object
     // type timestamp defaultPrevented target toElement srcElement 
-    // currentTarget ClientX ClientY screenY screenX
+    // currentTarget ClientX ClientY screenY screenX 
+    //altkey, ctrlkey, shiftkey, keyCode
 
+    //    This is example of event bubling
+    // here event of  inside element occur earlier
+// document.querySelector('.images').addEventListener('click',function(e){
+//     console.log("clicked inside the ul")
+// },false)
+// document.querySelector('#owl').addEventListener('click',function(e){
+//     console.log("clicked inside the owl")
+// },false)
+
+
+    //    this is example of event capturing 
+    //    here event of parent element occur earlier
+// document.querySelector('.images').addEventListener('click',function(e){
+//     console.log("clicked inside the ul")
+// },true)
+// document.querySelector('#owl').addEventListener('click',function(e){
+//     console.log("clicked inside the owl")
+// },true)
+ 
+
+//   code with no propagation
+  document.querySelector('.images').addEventListener('click',function(e){
+    console.log("clicked inside the ul")
+
+})
+document.querySelector('#owl').addEventListener('click',function(e){
+    e.stopPropagation()
+    console.log("clicked inside the owl")
+})
+ document.querySelector('#link').addEventListener('click',function(e){
+        e.preventDefault();
+       
+    })
 </script>
 </html>

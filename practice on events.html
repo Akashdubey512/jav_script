@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deleting list items</title>
+    <style>
+        img{
+            height: 130px;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <ul id="images">
+        <li><img src="https://imgs.search.brave.com/fEw-PvqlQ1-WCn84zw-0T2uetN9a3K9yZoDghflj_7E/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9saDct/dXMuZ29vZ2xldXNl/cmNvbnRlbnQuY29t/L2RvY3N6L0FEXzRu/WGNXbTdxcWpHeVJr/aU1JTmhpUFFucm8x/OGg0cFItZXVNQTNf/OEZHOXl2T3FVUmkw/YVZtd3k2T1Mxcmgt/SkFxWlBjTDBNU1o5/azlBdV8yb3M3Wmcx/dkNNT2EyTVdrc0cz/SWtDcVhGdV8zTmFw/czBDNEJ1dnZiY0Vs/b2NWZ1FSaWl5UERN/a24ycy1OdEJjMEpX/VXdWWlNPNzM3WT9r/ZXk9MWxuYm44LUF6/MnF5b2pzblpGcDFE/UQ.jpeg" alt=""></li>
+        <li><img src="https://imgs.search.brave.com/HDvm8_6kePbZ8iezE84DwG-QYlEceCHdRpkN_KI8POM/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9saDct/dXMuZ29vZ2xldXNl/cmNvbnRlbnQuY29t/L2RvY3N6L0FEXzRu/WGVPelRJSV9MZUMw/WEdjVmllNTY3MmVI/UzhfTF80QVVVMDFY/NHJwaV9zeUcyS01v/VVFOQXZvdFZZaDdY/a0NyUnR4SGVHYmVv/U0Rzc3FXblF3SndS/Yk55dU51T2Zsa29V/bDlha0tENDhBdjZi/MGg5em5Qa24zUlFy/X3NoYy1KZzFlMmVu/cVlyZ2NpYzRuRU5h/U0prelBTcHg3cGs_/a2V5PTFsbmJuOC1B/ejJxeW9qc25aRnAx/RFE.jpeg" alt=""></li>
+        <li><img src="https://imgs.search.brave.com/3_pM0iOCcRNaG3Bg8DQD7WESWxB_lHZmSondKQ2Ylu4/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTM1/NjA3MDc4Mi9waG90/by9idXNpbmVzc21h/bi1hbmQtYnVzaW5l/c3N3b21hbi1zbWls/aW5nLWxvb2tpbmct/YXQtcGhvbmUuanBn/P3M9NjEyeDYxMiZ3/PTAmaz0yMCZjPVhE/STlhZ2lhOExNMjRl/SW5UX2VFSzMtTjJY/QTdNTWdtSmd6R2k2/UUpnelU9" alt=""></li>
+        <li><img src="https://imgs.search.brave.com/3_pM0iOCcRNaG3Bg8DQD7WESWxB_lHZmSondKQ2Ylu4/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTM1/NjA3MDc4Mi9waG90/by9idXNpbmVzc21h/bi1hbmQtYnVzaW5l/c3N3b21hbi1zbWls/aW5nLWxvb2tpbmct/YXQtcGhvbmUuanBn/P3M9NjEyeDYxMiZ3/PTAmaz0yMCZjPVhE/STlhZ2lhOExNMjRl/SW5UX2VFSzMtTjJY/QTdNTWdtSmd6R2k2/UUpnelU9" alt=""></li>
+    </ul>
+</body>
+<script>
+document.querySelector('#images').addEventListener('click',function(e){
+    let removeIt = e.target.parentNode
+    removeIt.remove();
+    // or
+    // removeIt.parentNode.removeChild(removeIt)
+})
+</script>
+</html>
